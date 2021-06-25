@@ -1,8 +1,8 @@
 {
     "version": 3,
-    "mappings": "",
+    "mappings": "AAAA,AAAA,OAAO,CAAC;EACN,QAAQ,EAAE,QAAQ;EAClB,gBAAgB,EAAE,IAAI;CACvB",
     "sources": [
-        "nav-bar.sass"
+        "nav-bar.scss"
     ],
     "names": [],
     "file": "nav-bar.css"

@@ -11,12 +11,16 @@ import {
 const App = () => {
   return (
     <div className="main-container">
-      <LandingContainer />
-      {/* <NavBar />
+      <section>
+        <LandingContainer />
+      </section>
+      <section style={{display: "block"}}>
+        <NavBar />
+      </section>
       <BioContainer />
       <ProjectsContainer />
       <TechStackContainer />
-      <ContactContainer /> */}
+      <ContactContainer />
     </div>
   );
 };

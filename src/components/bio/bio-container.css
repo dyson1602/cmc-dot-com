@@ -1,1 +1,6 @@
-/* No CSS *//*# sourceMappingURL=bio-container.css.map */
+.bio {
+  position: relative;
+  width: 100%;
+  background-color: green;
+}
+/*# sourceMappingURL=bio-container.css.map */

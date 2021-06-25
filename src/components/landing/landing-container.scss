@@ -1,5 +1,10 @@
 .landing {
-  position: absolute;
-  top: 0; right: 0; bottom: 0; left: 0;
-  border: solid orange 15px;
+  position: fixed;
+  left: 0;
+  top: 0;
+  display: block;
+  height: 100%;
+  width: 100%;
+  background-color: orange;
+  border: solid black 15px;
 }

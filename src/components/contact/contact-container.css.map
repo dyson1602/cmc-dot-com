@@ -1,6 +1,6 @@
 {
     "version": 3,
-    "mappings": "",
+    "mappings": "AAAA,AAAA,QAAQ,CAAC;EACP,QAAQ,EAAE,QAAQ;EAClB,gBAAgB,EAAE,GAAG;CACtB",
     "sources": [
         "contact-container.scss"
     ],
