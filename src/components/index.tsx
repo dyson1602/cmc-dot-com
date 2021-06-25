@@ -1,0 +1,6 @@
+export * from './bio'
+export * from './contact'
+export * from './landing'
+export * from './nav-bar'
+export * from './projects'
+export * from './tech-stack'

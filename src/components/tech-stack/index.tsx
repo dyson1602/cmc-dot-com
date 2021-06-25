@@ -1,7 +1,3 @@
-const TechStackContainer: React.FC = () => {
-  return (
-    <div>TechStack</div>
-  )
-}
-
-export default TechStackContainer
+export const TechStackContainer: React.FC = () => {
+  return <div>TechStack</div>;
+};

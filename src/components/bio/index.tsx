@@ -1,7 +1,5 @@
-const BioContainer: React.FC = () => {
+export const BioContainer: React.FC = () => {
   return (
     <div>Bio</div>
   )
 }
-
-export default BioContainer

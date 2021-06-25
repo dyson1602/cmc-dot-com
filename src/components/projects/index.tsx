@@ -1,7 +1,5 @@
-const ProjectsContainer: React.FC = () => {
+export const ProjectsContainer: React.FC = () => {
   return (
     <div>Projects</div>
   )
 }
-
-export default ProjectsContainer
