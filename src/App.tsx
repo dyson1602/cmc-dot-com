@@ -1,7 +1,8 @@
 import './MainContainer.css';
 
-const MainContainer = () => {
+
+const App = () => {
   return <div className="main-container">MAIN CONTAINER</div>;
 };
 
-export default MainContainer;
+export default App;
