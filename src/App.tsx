@@ -12,11 +12,11 @@ const App = () => {
   return (
     <div className="main-container">
       <LandingContainer />
-      <NavBar />
+      {/* <NavBar />
       <BioContainer />
       <ProjectsContainer />
       <TechStackContainer />
-      <ContactContainer />
+      <ContactContainer /> */}
     </div>
   );
 };
