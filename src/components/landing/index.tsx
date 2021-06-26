@@ -1,4 +1,4 @@
-import './landing-container.css';
+import '../../styles/landing-container.css';
 
 export const LandingContainer: React.FC = () => {
   return (

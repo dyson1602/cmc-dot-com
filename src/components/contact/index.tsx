@@ -1,4 +1,4 @@
-import './contact-container.css'
+import '../../styles/contact-container.css'
 
 export const ContactContainer: React.FC = () => {
   return (

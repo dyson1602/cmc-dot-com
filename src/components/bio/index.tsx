@@ -1,4 +1,4 @@
-import './bio-container.css'
+import '../../styles/bio-container.css'
 
 export const BioContainer: React.FC = () => {
   return (

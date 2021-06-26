@@ -1,4 +1,4 @@
-import './nav-bar.css';
+import '../../styles/nav-bar.css';
 import { NavBarButton } from './nav-bar-button';
 
 
