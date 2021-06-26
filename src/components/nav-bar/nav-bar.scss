@@ -1,4 +1,12 @@
-.navbar {
-  position: relative;
-  background-color: blue;
+#nav-bar {
+  background-color: rgb(11, 11, 146);
+  
 }
+
+.sticky{
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+  z-index: 99;
+}
+

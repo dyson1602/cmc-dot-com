@@ -1,5 +1,11 @@
-.navbar {
-  position: relative;
-  background-color: blue;
+#nav-bar {
+  background-color: #0b0b92;
+}
+
+.sticky {
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+  z-index: 99;
 }
 /*# sourceMappingURL=nav-bar.css.map */
