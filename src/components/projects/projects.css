@@ -1,1 +1,7 @@
-/* No CSS *//*# sourceMappingURL=projects.css.map */
+#projects {
+  background-color: purple;
+  height: 400px;
+  margin-right: 5%;
+  margin-left: 5%;
+}
+/*# sourceMappingURL=projects.css.map */
