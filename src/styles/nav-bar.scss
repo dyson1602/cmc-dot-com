@@ -1,8 +1,10 @@
+@import './variables.scss';
+
 #nav-bar {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: rgb(11, 11, 146);
+  background-color: $jet;
   height: 50px;
   z-index: 1;
   // opacity: 30%

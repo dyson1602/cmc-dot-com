@@ -1,6 +1,8 @@
+@import './variables.scss';
+
 #landing {
-  background-color: orange;
-  border: solid black 15px;
+  background-color: $carolina-blue;
+  // border: solid black 15px;
   display: flex;
   flex-direction: column;
   justify-content: center;
