@@ -11,12 +11,8 @@ import {
 const App = () => {
   return (
     <div className="main-container">
-      <section>
-        <LandingContainer />
-      </section>
-      <section style={{display: "block"}}>
-        <NavBar />
-      </section>
+      <LandingContainer />
+      <NavBar />
       <BioContainer />
       <ProjectsContainer />
       <TechStackContainer />
