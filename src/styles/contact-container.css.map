@@ -1,8 +1,9 @@
 {
     "version": 3,
-    "mappings": "AAAA,AAAA,QAAQ,CAAC;EACP,QAAQ,EAAE,QAAQ;EAClB,gBAAgB,EAAE,GAAG;EACrB,MAAM,EAAE,KAAK;EACb,UAAU,EAAE,IAAI;EAChB,YAAY,EAAE,EAAE;EAAE,WAAW,EAAE,EAAE;CAClC",
+    "mappings": "AAEA,AAAA,QAAQ,CAAC;EACP,QAAQ,EAAE,QAAQ;EAClB,gBAAgB,EAAE,GAAG;EACrB,MAAM,EAAE,KAAK;EACb,UAAU,ECJS,IAAI,CAAC,KAAK,CAAC,KAAK;CDKpC",
     "sources": [
-        "contact-container.scss"
+        "contact-container.scss",
+        "variables.scss"
     ],
     "names": [],
     "file": "contact-container.css"

@@ -10,13 +10,13 @@
           align-items: center;
   background-color: #0b0b92;
   height: 50px;
+  z-index: 1;
 }
 
 .sticky {
   position: sticky;
   position: -webkit-sticky;
   top: 0;
-  z-index: 99;
 }
 
 .link-wrapper {

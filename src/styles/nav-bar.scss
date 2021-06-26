@@ -4,13 +4,15 @@
   align-items: center;
   background-color: rgb(11, 11, 146);
   height: 50px;
+  z-index: 1;
+  // opacity: 30%
 }
 
 .sticky{
   position: sticky;
   position: -webkit-sticky;
   top: 0;
-  z-index: 99;
+  // z-index: 1;
 }
 
 .link-wrapper{
