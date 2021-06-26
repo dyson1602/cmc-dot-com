@@ -1,6 +1,6 @@
 {
     "version": 3,
-    "mappings": "AAAA,AAAA,WAAW,CAAC;EACV,gBAAgB,EAAE,KAAK;CACxB",
+    "mappings": "AAAA,AAAA,WAAW,CAAC;EACV,gBAAgB,EAAE,IAAI;EACtB,MAAM,EAAE,KAAK;EACb,YAAY,EAAE,EAAE;EAAE,WAAW,EAAE,EAAE;CAElC",
     "sources": [
         "tech-stack.scss"
     ],
