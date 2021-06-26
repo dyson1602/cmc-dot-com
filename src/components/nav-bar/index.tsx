@@ -11,10 +11,10 @@ export const NavBar: React.FC = () => {
   return (
     <nav id="nav-bar" className="sticky">
       <div className="link-wrapper">
-        <NavBarButton dest="#bio" title="Bio" clickAction={clickAction}/>
-        <NavBarButton dest="#projects" title="Projects" clickAction={clickAction}/>
-        <NavBarButton dest="#tech-stack" title="Tech Stack" clickAction={clickAction}/>
-        <NavBarButton dest="#contact" title="Contacts" clickAction={clickAction}/>
+        <NavBarButton dest="#bio" title="Bio" />
+        <NavBarButton dest="#projects" title="Projects" />
+        <NavBarButton dest="#tech-stack" title="Tech Stack" />
+        <NavBarButton dest="#contact" title="Contacts" />
       </div>
     </nav>
   );

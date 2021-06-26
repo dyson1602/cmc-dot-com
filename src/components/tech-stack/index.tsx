@@ -1,5 +1,5 @@
 import './tech-stack.css'
 
 export const TechStackContainer: React.FC = () => {
-  return <div>TechStack</div>;
+  return <section id="tech-stack">TechStack</section>;
 };

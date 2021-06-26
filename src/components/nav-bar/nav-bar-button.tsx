@@ -1,5 +1,4 @@
 interface NavBarButtonProps {
-  clickAction(dest: string): void;
   dest: string;
   title: string;
 }
@@ -7,7 +6,12 @@ interface NavBarButtonProps {
 export const NavBarButton: React.FC<NavBarButtonProps> = ({
   dest,
   title,
-  clickAction,
 }) => {
+
+  const clickAction = (dest: string) => {
+    const target = document.querySelector(dest)
+    console.log(target)
+  }
+
   return <button onClick={() => clickAction(dest)}>{title}</button>;
 };
