@@ -1,8 +1,8 @@
 {
     "version": 3,
-    "mappings": "",
+    "mappings": "AAAA,AAAA,SAAS,CAAC;EACR,gBAAgB,EAAE,MAAM;EACxB,MAAM,EAAE,IAAI;CACb",
     "sources": [
-        "projects.sass"
+        "projects.scss"
     ],
     "names": [],
     "file": "projects.css"

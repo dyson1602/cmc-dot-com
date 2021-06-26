@@ -1,6 +1,9 @@
 #nav-bar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: rgb(11, 11, 146);
-  
+  height: 50px;
 }
 
 .sticky{
@@ -10,3 +13,7 @@
   z-index: 99;
 }
 
+.link-wrapper{
+  display: inline-flex;
+
+}

@@ -1,8 +1,8 @@
 {
     "version": 3,
-    "mappings": "",
+    "mappings": "AAAA,AAAA,WAAW,CAAC;EACV,gBAAgB,EAAE,KAAK;CACxB",
     "sources": [
-        "tech-stack.sass"
+        "tech-stack.scss"
     ],
     "names": [],
     "file": "tech-stack.css"
