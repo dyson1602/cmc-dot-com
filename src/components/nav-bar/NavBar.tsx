@@ -1,5 +1,5 @@
 import '../../styles/nav-bar.css';
-import { NavBarButton } from './nav-bar-button';
+import { NavBarButton } from './NavBarButton';
 
 
 export const NavBar: React.FC = () => {
