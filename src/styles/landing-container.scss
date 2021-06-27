@@ -2,11 +2,7 @@
 
 #landing {
   background-color: $carolina-blue;
-  // border: solid black 15px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  border: solid $black-coffee 15px;
 }
 
 .full-height{
