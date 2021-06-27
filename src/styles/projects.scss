@@ -1,5 +1,8 @@
+@import './variables.scss';
+
 #projects {
-  background-color: purple;
+  background-color: $projects-background;
   height: 400px;
-  margin-right: 5%; margin-left: 5%;
+  border-top: $section-border-top;
+  opacity: 20%;
 }

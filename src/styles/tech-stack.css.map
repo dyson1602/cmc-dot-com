@@ -1,8 +1,9 @@
 {
     "version": 3,
-    "mappings": "AAAA,AAAA,WAAW,CAAC;EACV,gBAAgB,EAAE,IAAI;EACtB,MAAM,EAAE,KAAK;EACb,YAAY,EAAE,EAAE;EAAE,WAAW,EAAE,EAAE;CAElC",
+    "mappings": "AAEA,AAAA,WAAW,CAAC;EACV,gBAAgB,ECmBM,KAAK;EDlB3B,MAAM,EAAE,KAAK;EACb,UAAU,ECYS,KAAK,CAAC,IAAI,CAAC,KAAK;CDXpC",
     "sources": [
-        "tech-stack.scss"
+        "tech-stack.scss",
+        "variables.scss"
     ],
     "names": [],
     "file": "tech-stack.css"

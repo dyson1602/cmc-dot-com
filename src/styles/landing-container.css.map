@@ -1,8 +1,9 @@
 {
     "version": 3,
-    "mappings": "AAAA,AAAA,QAAQ,CAAC;EACP,gBAAgB,EAAE,MAAM;EACxB,MAAM,EAAE,gBAAgB;EACxB,OAAO,EAAE,IAAI;EACb,cAAc,EAAE,MAAM;EACtB,eAAe,EAAE,MAAM;EACvB,WAAW,EAAE,MAAM;CACpB;;AAED,AAAA,YAAY,CAAA;EACV,IAAI,EAAE,CAAC;EACP,GAAG,EAAE,CAAC;EACN,MAAM,EAAE,KAAK;EACb,KAAK,EAAE,KAAK;CACb",
+    "mappings": "AAEA,AAAA,QAAQ,CAAC;EACP,gBAAgB,ECAF,SAAS;CDExB;;AAED,AAAA,YAAY,CAAA;EACV,IAAI,EAAE,CAAC;EACP,GAAG,EAAE,CAAC;EACN,MAAM,EAAE,KAAK;EACb,KAAK,EAAE,KAAK;CACb",
     "sources": [
-        "landing-container.scss"
+        "landing-container.scss",
+        "variables.scss"
     ],
     "names": [],
     "file": "landing-container.css"

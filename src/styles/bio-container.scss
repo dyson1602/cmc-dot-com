@@ -1,5 +1,7 @@
+@import './variables.scss';
+
 #bio {
   height: 800px;
-  width: 100%;
-  background-color: green;
+  background-color: $bio-backgrond;
+  border-top: $section-border-top;
 }

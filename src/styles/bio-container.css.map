@@ -1,8 +1,9 @@
 {
     "version": 3,
-    "mappings": "AAAA,AAAA,IAAI,CAAC;EACH,MAAM,EAAE,KAAK;EACb,KAAK,EAAE,IAAI;EACX,gBAAgB,EAAE,KAAK;CACxB",
+    "mappings": "AAEA,AAAA,IAAI,CAAC;EACH,MAAM,EAAE,KAAK;EACb,gBAAgB,ECgBF,KAAK;EDfnB,UAAU,ECYS,KAAK,CAAC,IAAI,CAAC,KAAK;CDXpC",
     "sources": [
-        "bio-container.scss"
+        "bio-container.scss",
+        "variables.scss"
     ],
     "names": [],
     "file": "bio-container.css"

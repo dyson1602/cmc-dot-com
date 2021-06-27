@@ -1,7 +1,7 @@
 #projects {
-  background-color: purple;
+  background-color: #616161;
   height: 400px;
-  margin-right: 5%;
-  margin-left: 5%;
+  border-top: white 50px solid;
+  opacity: 20%;
 }
 /*# sourceMappingURL=projects.css.map */

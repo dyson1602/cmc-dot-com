@@ -1,19 +1,30 @@
+@import './variables.scss';
+
 #nav-bar {
   display: flex;
-  justify-content: center;
+  justify-content: left;
   align-items: center;
-  background-color: rgb(11, 11, 146);
+  background-color: $nav-bar-background;
   height: 50px;
+  z-index: 1;
+  // opacity: 30%
 }
 
 .sticky{
   position: sticky;
   position: -webkit-sticky;
   top: 0;
-  z-index: 99;
+  // z-index: 1;
 }
 
 .link-wrapper{
   display: inline-flex;
 
+}
+
+.nav-bar-button {
+  background-color: $nav-bar-background;
+  border: none;
+  margin: 0px, 30px;
+  font-size:x-large;
 }

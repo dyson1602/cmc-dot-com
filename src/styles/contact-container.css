@@ -1,9 +1,7 @@
 #contact {
   position: relative;
-  background-color: red;
+  background-color: #49393bff;
   height: 800px;
-  margin-top: 50px;
-  margin-right: 5%;
-  margin-left: 5%;
+  border-top: white 50px solid;
 }
 /*# sourceMappingURL=contact-container.css.map */

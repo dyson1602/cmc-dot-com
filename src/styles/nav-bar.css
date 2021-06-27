@@ -2,26 +2,33 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-color: #0b0b92;
+  background-color: #49393bff;
   height: 50px;
+  z-index: 1;
 }
 
 .sticky {
   position: sticky;
   position: -webkit-sticky;
   top: 0;
-  z-index: 99;
 }
 
 .link-wrapper {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
+}
+
+.nav-bar-button {
+  background-color: #49393bff;
+  border: none;
+  margin: 0px, 30px;
+  font-size: x-large;
 }
 /*# sourceMappingURL=nav-bar.css.map */
