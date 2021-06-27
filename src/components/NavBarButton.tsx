@@ -12,5 +12,5 @@ export const NavBarButton: React.FC<NavBarButtonProps> = ({ dest, title }) => {
     }
   };
 
-  return <button onClick={() => clickAction(dest)}>{title}</button>;
+  return <button className="nav-bar-button" onClick={() => clickAction(dest)}>{title}</button>;
 };
