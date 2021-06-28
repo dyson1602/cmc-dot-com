@@ -5,9 +5,16 @@
   justify-content: left;
   align-items: center;
   background-color: $nav-bar-background;
-  height: 50px;
+  height: 55px;
   z-index: 1;
   // opacity: 30%
+  animation: popdown 0.5s;
+  
+}
+
+@keyframes popdown {
+  
+
 }
 
 .sticky{
@@ -27,4 +34,6 @@
   border: none;
   margin: 0px, 30px;
   font-size:x-large;
+  color: white;
 }
+

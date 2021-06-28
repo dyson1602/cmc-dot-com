@@ -9,11 +9,15 @@
       -ms-flex-align: center;
           align-items: center;
   background-color: #49393bff;
-  height: 50px;
+  height: 55px;
   z-index: 1;
+  -webkit-animation: popdown 0.5s;
+          animation: popdown 0.5s;
 }
 
-.sticky {
+@-webkit-keyframes popdown {}
+
+@keyframes popdown {}.sticky {
   position: sticky;
   position: -webkit-sticky;
   top: 0;
@@ -30,5 +34,6 @@
   border: none;
   margin: 0px, 30px;
   font-size: x-large;
+  color: white;
 }
 /*# sourceMappingURL=nav-bar.css.map */
