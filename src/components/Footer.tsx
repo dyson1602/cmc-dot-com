@@ -1,7 +1,12 @@
-import '../styles/footer.css'
+import '../styles/footer.css';
+import { ScrollToTopButton } from './ScrollToTopButton';
 
 export const Footer = () => {
   return (
-    <div>FOOTER</div>
-  )
-}
+    <section id="footer">
+      <div>
+        <ScrollToTopButton />
+        FOOTER</div>
+    </section>
+  );
+};

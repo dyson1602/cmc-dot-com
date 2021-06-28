@@ -2,6 +2,7 @@ import './styles/App.css';
 import {
   BioContainer,
   ContactContainer,
+  Footer,
   LandingContainer,
   NavBar,
   ProjectsContainer,
@@ -17,6 +18,7 @@ const App = () => {
       <ProjectsContainer />
       <TechStackContainer />
       <ContactContainer />
+      <Footer />
     </div>
   );
 };
