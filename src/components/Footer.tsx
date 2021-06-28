@@ -6,7 +6,7 @@ export const Footer = () => {
     <section id="footer">
       <div>
         <ScrollToTopButton />
-        FOOTER</div>
+      </div>
     </section>
   );
 };

@@ -1,3 +1,11 @@
 export const ScrollToTopButton: React.FC = () => {
-  return <button>Scroll To TOP</button>;
+  const landing = document.querySelector('#landing');
+
+  const clickHandler = () => {
+    if (landing) {
+      landing.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
+  return <button onClick={clickHandler}>Scroll To TOP</button>;
 };
