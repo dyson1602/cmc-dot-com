@@ -1,5 +1,10 @@
 import '../styles/contact-container.css';
 import useCustomForm from '../hooks/useCustomForm';
+import emailjs, { init } from 'emailjs-com';
+import {
+  EMAILJS_SERVICE_ID,
+  EMAILJS_TEMPLATE_ID,
+} from '../assets/SECRET-KEY';
 
 const initialValues = {
   name: '',
@@ -8,16 +13,30 @@ const initialValues = {
 };
 
 export const ContactContainer: React.FC = () => {
-  const { values, errors, touched, handleChange, handleBlur, handleSubmit } =
+  const { values, handleChange, handleSubmit } =
     useCustomForm({
       initialValues,
-      onSubmit: (values) => console.log({ values }),
+      onSubmit: (event) => sendEmail(event),
     });
+
+  const sendEmail = async (event: any) => {
+    init('user_FC4RZdhJccrBhWOaL720C');
+    try {
+      const response = await emailjs.sendForm(
+        EMAILJS_SERVICE_ID,
+        EMAILJS_TEMPLATE_ID,
+        event.target
+      );
+      console.log('Success!', response.status, response.text);
+    } catch (error) {
+      console.log('Failed...', error);
+    }
+  };
 
   return (
     <section id="contact">
       <h1>Contact</h1>
-      <form onSubmit={handleSubmit}>
+      <form id="contact-form"onSubmit={handleSubmit}>
         <label>Name: </label>
         <input
           type="text"
@@ -33,7 +52,11 @@ export const ContactContainer: React.FC = () => {
           value={values.email}
         />
         <label>Message:</label>
-        <textarea name="message" onChange={handleChange} value={values.message} />
+        <textarea
+          name="message"
+          onChange={handleChange}
+          value={values.message}
+        />
         <br />
         <input type="submit" value="Submit" />
       </form>

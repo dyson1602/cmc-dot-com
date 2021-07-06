@@ -56,7 +56,8 @@ const useCustomForm = ({ initialValues, onSubmit }: useCustomFormProps) => {
   const handleSubmit = (event: any) => {
     if (event) event.preventDefault();
     setErrors({ ...errors });
-    onSubmit({ values, errors });
+    onSubmit(event);
+    // onSubmit({ values, errors });
   };
 
   return {
