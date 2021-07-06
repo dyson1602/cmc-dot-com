@@ -1,6 +1,22 @@
 import React, { useState, useEffect, useRef } from 'react';
 
-const useCustomForm = ({ initialValues, onSubmit }) => {
+interface initialValues {
+  name: string;
+  email: string;
+  message: string;
+}
+
+interface onSubmitProps {
+  values: initialValues;
+  errors: any;
+}
+
+interface useCustomFormProps {
+  initialValues: initialValues;
+  onSubmit({ values, errors }: onSubmitProps): void;
+}
+
+const useCustomForm = ({ initialValues, onSubmit }: useCustomFormProps) => {
   const [values, setValues] = useState(initialValues || {});
   const [errors, setErrors] = useState({});
   const [touched, setTouched] = useState({});
@@ -20,10 +36,13 @@ const useCustomForm = ({ initialValues, onSubmit }) => {
     formRendered.current = false;
   }, [initialValues]);
 
-  const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+  const handleChange = (
+    event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
     const { target } = event;
     const { name, value } = target;
     event.persist();
+    console.log(name, value, values);
     setValues({ ...values, [name]: value });
   };
 

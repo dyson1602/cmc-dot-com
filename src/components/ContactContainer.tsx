@@ -1,29 +1,41 @@
 import '../styles/contact-container.css';
-import { useState } from 'react';
+import useCustomForm from '../hooks/useCustomForm';
 
-interface EmailProps {
-  name: string;
-  email: string;
-  message: string;
-}
+const initialValues = {
+  name: '',
+  email: '',
+  message: '',
+};
 
 export const ContactContainer: React.FC = () => {
-  const [emailProps, setEmailProps] = useState<EmailProps>();
-  const [name, setFormName] = useState<string>()
-
-  const formSubmitHandler = () => {};
+  const { values, errors, touched, handleChange, handleBlur, handleSubmit } =
+    useCustomForm({
+      initialValues,
+      onSubmit: (values) => console.log({ values }),
+    });
 
   return (
     <section id="contact">
       <h1>Contact</h1>
-      <form>
+      <form onSubmit={handleSubmit}>
         <label>Name: </label>
-        <input type="text" name="name" value={name} />
+        <input
+          type="text"
+          name="name"
+          onChange={handleChange}
+          value={values.name}
+        />
         <label>Email: </label>
-        <input type="text" name="email" />
+        <input
+          type="text"
+          name="email"
+          onChange={handleChange}
+          value={values.email}
+        />
         <label>Message:</label>
-        <textarea name="message" />
-        <input type="submit" value="Submit"/>
+        <textarea name="message" onChange={handleChange} value={values.message} />
+        <br />
+        <input type="submit" value="Submit" />
       </form>
     </section>
   );
