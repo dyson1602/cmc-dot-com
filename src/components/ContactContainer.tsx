@@ -1,33 +1,22 @@
 import '../styles/contact-container.css';
-import useCustomForm from '../hooks/useCustomForm';
+import ContactForm from './ContactForm';
+import { Inputs } from './ContactForm';
 import emailjs, { init } from 'emailjs-com';
-import {
-  EMAILJS_SERVICE_ID,
-  EMAILJS_TEMPLATE_ID,
-} from '../assets/SECRET-KEY';
-
-const initialValues = {
-  name: '',
-  email: '',
-  message: '',
-};
+import { EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID } from '../assets/SECRET-KEY';
 
 export const ContactContainer: React.FC = () => {
-  const { values, handleChange, handleSubmit } =
-    useCustomForm({
-      initialValues,
-      onSubmit: (event) => sendEmail(event),
-    });
-
-  const sendEmail = async (event: any) => {
+  const sendEmail = async (userInputs: Inputs) => {
     init('user_FC4RZdhJccrBhWOaL720C');
+
     try {
-      const response = await emailjs.sendForm(
+      console.log();
+      const response = await emailjs.send(
         EMAILJS_SERVICE_ID,
         EMAILJS_TEMPLATE_ID,
-        event.target
+        userInputs
       );
       console.log('Success!', response.status, response.text);
+      return response.status
     } catch (error) {
       console.log('Failed...', error);
     }
@@ -36,30 +25,7 @@ export const ContactContainer: React.FC = () => {
   return (
     <section id="contact">
       <h1>Contact</h1>
-      <form id="contact-form"onSubmit={handleSubmit}>
-        <label>Name: </label>
-        <input
-          type="text"
-          name="name"
-          onChange={handleChange}
-          value={values.name}
-        />
-        <label>Email: </label>
-        <input
-          type="text"
-          name="email"
-          onChange={handleChange}
-          value={values.email}
-        />
-        <label>Message:</label>
-        <textarea
-          name="message"
-          onChange={handleChange}
-          value={values.message}
-        />
-        <br />
-        <input type="submit" value="Submit" />
-      </form>
+      <ContactForm sendEmail={sendEmail} />
     </section>
   );
 };
