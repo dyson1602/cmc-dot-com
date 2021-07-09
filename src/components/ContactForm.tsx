@@ -1,4 +1,5 @@
 import { useForm, SubmitHandler } from 'react-hook-form';
+import sendEmail from '../email/sendEmail';
 
 export type Inputs = {
   name: string;
@@ -6,11 +7,7 @@ export type Inputs = {
   message: string;
 };
 
-interface ContactFormProps {
-  sendEmail(userInputs: Inputs): Promise<void | number>;
-}
-
-const ContactForm: React.FC<ContactFormProps> = ({ sendEmail }) => {
+const ContactForm: React.FC = () => {
   const {
     register,
     handleSubmit,
@@ -19,7 +16,7 @@ const ContactForm: React.FC<ContactFormProps> = ({ sendEmail }) => {
   } = useForm<Inputs>();
   const onSubmit: SubmitHandler<Inputs> = async (userInputs) => {
     const status = await sendEmail(userInputs);
-    if(status === 200) reset()
+    if (status === 200) reset();
   };
 
   const validEmailPattern =

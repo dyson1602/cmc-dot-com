@@ -13,8 +13,8 @@ export const NavBar: React.FC = () => {
       <div className="link-wrapper">
         <NavBarButton dest="#bio" title="Bio" />
         <NavBarButton dest="#projects" title="Projects" />
-        <NavBarButton dest="#tech-stack" title="Tech Stack" />
-        <NavBarButton dest="#contact" title="Contacts" />
+        <NavBarButton dest="#tech-stack" title="Tech" />
+        <NavBarButton dest="#contact" title="Contact" />
       </div>
     </nav>
   );
