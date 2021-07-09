@@ -1,5 +1,4 @@
 import '../styles/landing-container.css';
-// import LandingAnimation from './LandingAnimation';
 import ANewProductionAnimation from '../animations/ANewProduction';
 import ThursdayAnimation from '../animations/Thursday';
 
