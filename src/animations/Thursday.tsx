@@ -2,9 +2,8 @@ import '../styles/landing-animation.css';
 import { useEffect } from 'react';
 import anime from 'animejs';
 
-const LandingAnimation: React.FC = () => {
+const ThursdayAnimation: React.FC = () => {
   useEffect(() => {
-    // const textWrapper = document.querySelector('.ml12');
     const textWrapper = document.querySelector('.ml1 .letters');
     if (textWrapper && textWrapper.textContent) {
       textWrapper.innerHTML = textWrapper.textContent.replace(
@@ -13,25 +12,6 @@ const LandingAnimation: React.FC = () => {
       );
     }
 
-    // anime
-    //   .timeline({ loop: true })
-    //   .add({
-    //     targets: '.ml12 .letter',
-    //     translateX: [40, 0],
-    //     translateZ: 0,
-    //     opacity: [0, 1],
-    //     easing: 'easeOutExpo',
-    //     duration: 1200,
-    //     delay: (el, i) => 500 + 30 * i,
-    //   })
-    //   .add({
-    //     targets: '.ml12 .letter',
-    //     translateX: [0, -30],
-    //     opacity: [1, 0],
-    //     easing: 'easeInExpo',
-    //     duration: 1100,
-    //     delay: (el, i) => 100 + 30 * i,
-    //   });
     anime
       .timeline({ loop: true })
       .add({
@@ -64,7 +44,6 @@ const LandingAnimation: React.FC = () => {
   const name = 'CHRISTOPHER MICHAEL CLARK';
 
   return (
-    // <h1 className="ml12">{name}</h1>
     <h1 className="ml1">
       <span className="text-wrapper">
         <span className="line line1"></span>
@@ -75,4 +54,4 @@ const LandingAnimation: React.FC = () => {
   );
 };
 
-export default LandingAnimation;
+export default ThursdayAnimation;
