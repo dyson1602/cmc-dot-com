@@ -2,12 +2,39 @@
 
 #landing {
   background-color: $carolina-blue;
-  // border-top: solid $black-coffee 15px;
-}
-
-.full-height{
   left: 0;
   top: 0;
   height: 100vh;
   width: 100vw;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.landing-border {
+  position: absolute;
+  width: 5%;
+  height: 5%;
+  border: solid $jet;
+}
+
+.tl {
+  border-width: 8px 0px 0px 8px;
+  top: 5%;
+  left: 5%;
+}
+.tr {
+  border-width: 8px 8px 0px 0px;
+  top: 5%;
+  right: 5%;
+}
+.bl {
+  border-width: 0px 0px 8px 8px;
+  bottom: 5%;
+  left: 5%;
+}
+.br {
+  border-width: 0px 8px 8px 0px;
+  bottom: 5%;
+  right: 5%;
 }
