@@ -1,0 +1,66 @@
+.scroll-button {
+  width: 150px;
+  height: 50px;
+  border: 1px solid #49393bff;
+  font-size: 20px;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+  z-index: 0;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+.scroll-button::before, .scroll-button::after {
+  position: absolute;
+  background: #279af1ff;
+  z-index: -1;
+  -webkit-transition: 1s;
+  transition: 1s;
+  content: '';
+}
+
+.scroll-button::before {
+  height: 50px;
+  width: 130px;
+}
+
+.scroll-button::after {
+  width: 150px;
+  height: 30px;
+}
+
+.noselect {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.scroll-button:hover::before {
+  width: 0px;
+  color: #363537ff;
+  background: #49393bff;
+}
+
+.scroll-button:hover::after {
+  height: 0px;
+  color: white;
+  background: #49393bff;
+}
+
+.scroll-button:hover {
+  color: white;
+  background: #49393bff;
+}
+/*# sourceMappingURL=scroll-button.css.map */
