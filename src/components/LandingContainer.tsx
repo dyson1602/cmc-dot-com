@@ -1,10 +1,14 @@
 import '../styles/landing-container.css';
-import LandingAnimation from './LandingAnimation';
+// import LandingAnimation from './LandingAnimation';
+import ANewProductionAnimation from '../animations/ANewProduction';
+import ThursdayAnimation from '../animations/Thursday';
+
 
 export const LandingContainer: React.FC = () => {
   return (
     <section id="landing" className="full-height">
-      <LandingAnimation />
+      <ANewProductionAnimation />
+      {/* <ThursdayAnimation /> */}
     </section>
   );
 };
