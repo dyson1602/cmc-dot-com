@@ -1,9 +1,9 @@
 @import './variables.scss';
 
-.scroll-button {
+.scroll-to-top {
   width: 150px;
   height: 50px;
-  border: 1px solid $black-coffee;
+  border: 1px solid white;
   font-size: 20px;
   cursor: pointer;
   -webkit-tap-highlight-color: transparent;
@@ -13,24 +13,25 @@
   position: relative;
   z-index: 0;
   transition: 1s;
-  color: $jet;
+  color: white;
+  background: $black-coffee;
 }
 
-.scroll-button::before,
-.scroll-button::after {
+.scroll-to-top::before,
+.scroll-to-top::after {
   position: absolute;
-  background: $carolina-blue;
+  background: $black-coffee;
   z-index: -1;
   transition: 1s;
   content: '';
 }
 
-.scroll-button::before {
+.scroll-to-top::before {
   height: 50px;
   width: 130px;
 }
 
-.scroll-button::after {
+.scroll-to-top::after {
   width: 150px;
   height: 30px;
 }
@@ -44,19 +45,19 @@
   user-select: none;
 }
 
-.scroll-button:hover::before {
+.scroll-to-top:hover::before {
   width: 0px;
-  color: $jet;
+  color: white;
   background: $black-coffee;
 }
 
-.scroll-button:hover::after {
+.scroll-to-top:hover::after {
   height: 0px;
   color: white;
   background: $black-coffee;
 }
 
-.scroll-button:hover {
+.scroll-to-top:hover {
   color: white;
   background: $black-coffee;
 }
