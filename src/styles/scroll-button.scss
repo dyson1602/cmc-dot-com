@@ -1,44 +1,5 @@
 @import './variables.scss';
 
-// .scroll-button {
-//   border: none;
-//   border-radius: 2px;
-//   font-size: x-large;
-//   color: $carolina-blue;
-//   background-color: $carolina-blue;
-//   animation: draw-button;
-//   animation-duration: 5s;
-//   animation-delay: 1s;
-//   animation-iteration-count: 1;
-//   animation-fill-mode: forwards;
-//   transition: ease-in;
-// }
-
-// @keyframes draw-button {
-//   from {
-//     border: none;
-//     color: $carolina-blue;
-//   }
-//   to {
-//     border: solid;
-//     color: white;
-//   }
-// }
-
-// *{
-//   margin: 0;
-//   padding: 0;
-//   box-sizing: border-box;
-// }
-
-// body {
-//   height: 100vh;
-//   background: #eee;
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
-// }
-
 .scroll-button {
   width: 150px;
   height: 50px;

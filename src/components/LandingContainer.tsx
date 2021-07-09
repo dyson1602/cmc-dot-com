@@ -5,11 +5,14 @@ import ScrollToProfileButton from './ScollToProfileButton';
 
 export const LandingContainer: React.FC = () => {
   return (
-    <section id="landing" className="full-height">
+    <section id="landing">
       <ANewProductionAnimation />
       <br />
       <ScrollToProfileButton />
-      {/* <ThursdayAnimation /> */}
+      <div className="landing-border tl"/>
+      <div className="landing-border tr"/>
+      <div className="landing-border bl"/>
+      <div className="landing-border br"/>
     </section>
   );
 };
