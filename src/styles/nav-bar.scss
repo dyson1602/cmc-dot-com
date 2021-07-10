@@ -1,15 +1,10 @@
 @import './variables.scss';
 
 #nav-bar {
-  display: flex;
-  justify-content: left;
-  align-items: center;
   background-color: $nav-bar-background;
   height: 55px;
   z-index: 1;
-  // opacity: 30%
   animation: popdown 0.5s;
-  
 }
 
 @keyframes popdown {
@@ -25,15 +20,21 @@
 }
 
 .link-wrapper{
-  display: inline-flex;
-
-}
-
-.nav-bar-button {
-  background-color: $nav-bar-background;
-  border: none;
-  margin: 0px, 30px;
-  font-size:x-large;
-  color: white;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  padding-left: 15px;
+  .nav-bar-button {
+    float: left;
+  }
+  .link-wrapper-right{
+    float: right;
+    height: 100%;
+    padding-right: 15px;
+    * {
+      margin: 0px 10px;
+      height: inherit;
+    }
+  }
 }
 

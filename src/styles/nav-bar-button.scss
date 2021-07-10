@@ -1,0 +1,11 @@
+@import './variables.scss' ;
+
+.nav-bar-button {
+  background-color: $nav-bar-background;
+  margin: 0px 30px;
+  font-size: 30px;
+  color: white;
+  height:100%;
+  text-align: center;
+  padding: 5px 0px;
+}
