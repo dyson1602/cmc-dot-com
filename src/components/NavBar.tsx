@@ -1,8 +1,5 @@
 import '../styles/nav-bar.css';
-import { DiGithubBadge } from 'react-icons/di';
-import { FaLinkedin, FaTwitter } from 'react-icons/fa';
-import { IconContext } from 'react-icons/lib';
-
+import { FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa';
 import { NavBarButton } from './NavBarButton';
 
 export const NavBar: React.FC = () => {
@@ -10,19 +7,26 @@ export const NavBar: React.FC = () => {
     <nav id="nav-bar" className="sticky">
       <div className="link-wrapper">
         <NavBarButton dest="#bio" title="Bio" />
-
         <NavBarButton dest="#projects" title="Projects" />
-
         <NavBarButton dest="#tech-stack" title="Tech" />
-
         <NavBarButton dest=".contact" title="Contact" />
-
+        {/* <div style={{ flexGrow: 1 }} /> */}
         <div className="link-wrapper-right">
-          <IconContext.Provider value={{ color: 'white', size: '35px' }}>
-            <DiGithubBadge />
-            <FaLinkedin />
-            <FaTwitter />
-          </IconContext.Provider>
+          <div>
+            <a href="https://github.com/dyson1602">
+              <FaGithub />
+            </a>
+          </div>
+          <div>
+            <a href="https://www.linkedin.com/in/christopher-michael-clark/">
+              <FaLinkedin />
+            </a>
+          </div>
+          <div>
+            <a href="">
+              <FaTwitter />
+            </a>
+          </div>
         </div>
       </div>
     </nav>

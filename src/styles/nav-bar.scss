@@ -8,33 +8,39 @@
 }
 
 @keyframes popdown {
-  
-
 }
 
-.sticky{
+.sticky {
   position: sticky;
   position: -webkit-sticky;
   top: 0;
   // z-index: 1;
 }
 
-.link-wrapper{
+.link-wrapper {
   overflow: hidden;
+  display: flex;
+  align-items: center;
   width: 100%;
-  height: 100%;
+  height: 55px;
   padding-left: 15px;
-  .nav-bar-button {
-    float: left;
-  }
-  .link-wrapper-right{
-    float: right;
+  .link-wrapper-right {
+    display: flex;
+    margin-left: auto;
     height: 100%;
     padding-right: 15px;
-    * {
-      margin: 0px 10px;
-      height: inherit;
+    div {
+      a {
+        color: white;
+        font-size: 45px;
+        margin: 0 10px;
+      }
+      &:hover {
+        a {
+          color: $black-coffee;
+        }
+        background-color: white;
+      }
     }
   }
 }
-

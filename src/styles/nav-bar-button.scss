@@ -2,10 +2,15 @@
 
 .nav-bar-button {
   background-color: $nav-bar-background;
-  margin: 0px 30px;
+  padding: 0px 30px;
+  padding-top: 3px;
   font-size: 30px;
   color: white;
   height:100%;
   text-align: center;
-  padding: 5px 0px;
+  cursor: pointer;
+  &:hover{
+    color: $black-coffee;
+    background-color: white;
+  }
 }
