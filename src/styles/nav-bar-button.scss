@@ -1,0 +1,16 @@
+@import './variables.scss' ;
+
+.nav-bar-button {
+  background-color: $nav-bar-background;
+  padding: 0px 30px;
+  padding-top: 3px;
+  font-size: 30px;
+  color: white;
+  height:100%;
+  text-align: center;
+  cursor: pointer;
+  &:hover{
+    color: $black-coffee;
+    background-color: white;
+  }
+}

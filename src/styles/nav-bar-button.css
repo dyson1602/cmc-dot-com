@@ -1,0 +1,16 @@
+.nav-bar-button {
+  background-color: #49393bff;
+  padding: 0px 30px;
+  padding-top: 3px;
+  font-size: 30px;
+  color: white;
+  height: 100%;
+  text-align: center;
+  cursor: pointer;
+}
+
+.nav-bar-button:hover {
+  color: #49393bff;
+  background-color: white;
+}
+/*# sourceMappingURL=nav-bar-button.css.map */

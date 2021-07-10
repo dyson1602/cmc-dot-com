@@ -1,4 +1,4 @@
-import '../styles/landing-animation.css';
+import '../styles/thursday-animation.css';
 import { useEffect } from 'react';
 import anime from 'animejs';
 
