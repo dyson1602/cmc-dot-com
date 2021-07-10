@@ -9,9 +9,18 @@
     width: 100%;
     height: 100px;
   }
+  label {
+    color: $jet;
+  }
 }
 
-#contact-submit-button {
+// csb: contact-submit-button
+.complete {
+  color: $jet !important;
+  box-shadow: $jet;
+}
+
+.csb {
   width: 150px;
   height: 50px;
   border: 1px solid white;
@@ -27,8 +36,8 @@
   color: $contacts-background;
 }
 
-#contact-submit-button::before,
-#contact-submit-button::after {
+.csb .complete::before,
+.csb .complete::after {
   position: absolute;
   background: $carolina-blue;
   z-index: -1;
@@ -36,14 +45,16 @@
   content: '';
 }
 
-#contact-submit-button::before {
+.csb::before {
   height: 50px;
   width: 130px;
+  color: $jet;
 }
 
-#contact-submit-button::after {
+.complete::after {
   width: 150px;
   height: 30px;
+  color: $jet;
 }
 
 .noselect {
@@ -55,19 +66,19 @@
   user-select: none;
 }
 
-#contact-submit-button:hover::before {
+.complete:hover::before {
   width: 0px;
   color: $jet;
   background: $contacts-background;
 }
 
-#contact-submit-button:hover::after {
+.complete:hover::after {
   height: 0px;
-  color: white;
+  color: white !important;
   background: $contacts-background;
 }
 
-#contact-submit-button:hover {
-  color: white;
+.complete:hover {
+  color: white !important;
   background: $contacts-background;
 }

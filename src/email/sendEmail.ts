@@ -1,8 +1,8 @@
-import { Inputs } from '../components/ContactForm';
+import { ContactFormValues } from '../components/ContactForm';
 import emailjs, { init } from 'emailjs-com';
 import { EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID } from '../assets/SECRET-KEY';
 
-const sendEmail = async (userInputs: Inputs) => {
+const sendEmail = async (userInputs: ContactFormValues) => {
   init('user_FC4RZdhJccrBhWOaL720C');
 
   try {
