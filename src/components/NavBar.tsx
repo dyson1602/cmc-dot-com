@@ -10,20 +10,19 @@ export const NavBar: React.FC = () => {
         <NavBarButton dest="#projects" title="Projects" />
         <NavBarButton dest="#tech-stack" title="Tech" />
         <NavBarButton dest=".contact" title="Contact" />
-        {/* <div style={{ flexGrow: 1 }} /> */}
         <div className="link-wrapper-right">
           <div>
-            <a href="https://github.com/dyson1602">
+            <a href="https://github.com/dyson1602" target="popup">
               <FaGithub />
             </a>
           </div>
           <div>
-            <a href="https://www.linkedin.com/in/christopher-michael-clark/">
+            <a href="https://www.linkedin.com/in/christopher-michael-clark/" target="popup">
               <FaLinkedin />
             </a>
           </div>
           <div>
-            <a href="">
+            <a href="" target="popup">
               <FaTwitter />
             </a>
           </div>

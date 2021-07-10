@@ -7,7 +7,6 @@ export const LandingContainer: React.FC = () => {
   return (
     <section id="landing">
       <ANewProductionAnimation />
-      {/* <ThursdayAnimation /> */}
       <br />
       <br />
       <ScrollToProfileButton />
