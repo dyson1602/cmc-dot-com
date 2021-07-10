@@ -11,7 +11,17 @@
   height: 100px;
 }
 
-#contact-submit-button {
+.contact-form label {
+  color: #363537ff;
+}
+
+.complete {
+  color: #363537ff !important;
+  -webkit-box-shadow: #363537ff;
+          box-shadow: #363537ff;
+}
+
+.csb {
   width: 150px;
   height: 50px;
   border: 1px solid white;
@@ -31,11 +41,11 @@
   z-index: 0;
   -webkit-transition: 1s;
   transition: 1s;
-  color: #616161;
+  color: #949494;
 }
 
-#contact-submit-button::before,
-#contact-submit-button::after {
+.csb .complete::before,
+.csb .complete::after {
   position: absolute;
   background: #279af1ff;
   z-index: -1;
@@ -44,14 +54,16 @@
   content: '';
 }
 
-#contact-submit-button::before {
+.csb::before {
   height: 50px;
   width: 130px;
+  color: #363537ff;
 }
 
-#contact-submit-button::after {
+.complete::after {
   width: 150px;
   height: 30px;
+  color: #363537ff;
 }
 
 .noselect {
@@ -62,20 +74,20 @@
   user-select: none;
 }
 
-#contact-submit-button:hover::before {
+.complete:hover::before {
   width: 0px;
   color: #363537ff;
-  background: #616161;
+  background: #949494;
 }
 
-#contact-submit-button:hover::after {
+.complete:hover::after {
   height: 0px;
-  color: white;
-  background: #616161;
+  color: white !important;
+  background: #949494;
 }
 
-#contact-submit-button:hover {
-  color: white;
-  background: #616161;
+.complete:hover {
+  color: white !important;
+  background: #949494;
 }
 /*# sourceMappingURL=contact-form.css.map */
