@@ -1,12 +1,13 @@
 import '../styles/contact-container.css';
 import ContactForm from './ContactForm';
 
-
 export const ContactContainer: React.FC = () => {
   return (
-    <section id="contact">
+    <section className="contact">
       <h1>Contact Me Here!</h1>
-      <ContactForm />
+      <div className="form-div">
+        <ContactForm />
+      </div>
     </section>
   );
 };

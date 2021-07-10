@@ -1,3 +1,5 @@
+import '../styles/contact-form.css'
+
 import { useForm, SubmitHandler } from 'react-hook-form';
 import sendEmail from '../email/sendEmail';
 
@@ -23,23 +25,32 @@ const ContactForm: React.FC = () => {
     /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
 
   return (
-    <form id="contact-form" onSubmit={handleSubmit(onSubmit)}>
-      <label>Name: </label>
-      <input type="text" {...register('name', { required: true })} />
-      <label>Email: </label>
-      <input
-        type="text"
-        {...register('email', {
-          required: true,
-          pattern: { value: validEmailPattern, message: 'it is not an email' },
-        })}
-      />
-      <label>Message:</label>
-      <textarea {...register('message', { required: true })} />
-      <br />
-      <br />
-      <input type="submit" value="Submit" />
-    </form>
+      <form className='contact-form' onSubmit={handleSubmit(onSubmit)}>
+        <label>Name: </label>
+        <br />
+        <input type="text" placeholder="Your name..." {...register('name', { required: true })} />
+        <br />
+        <label>Email: </label>
+        <br />
+        <input
+          type="text"
+          placeholder='Your email address...'
+          {...register('email', {
+            required: true,
+            pattern: {
+              value: validEmailPattern,
+              message: 'it is not an email',
+            },
+          })}
+        />
+        <br />
+        <label>Message:</label>
+        <br />
+        <textarea placeholder='What do you want to say?' {...register('message', { required: true })} />
+        <br />
+        <br />
+        <input id="contact-submit-button" type="submit" value="Submit" />
+      </form>
   );
 };
 

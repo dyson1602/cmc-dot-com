@@ -1,8 +1,17 @@
 @import './variables.scss';
 
-#contact {
+.contact {
+  display: flex;
   position: relative;
   background-color: $contacts-background;
   height: 500px;
   border-top: $section-border-top;
+  align-items: center;
+}
+
+.form-div {
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  display: flex;
 }
