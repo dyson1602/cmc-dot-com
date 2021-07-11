@@ -7,64 +7,106 @@ import { useState } from 'react';
 import { useEffect } from 'react';
 
 interface sectionPositions {
-  bio: { x: number; y: number };
-  projects: { x: number; y: number };
-  techStack: { x: number; y: number };
-  contact: { x: number; y: number };
+  bio: { x: number; y: number } | undefined;
+  projects: { x: number; y: number } | undefined;
+  techStack: { x: number; y: number } | undefined;
+  contact: { x: number; y: number } | undefined;
 }
 
 export const NavBar: React.FC = () => {
   const [highlight, setHighlight] = useState<string | null>(null);
-  const [sectionPositions, setSectionPositions] = useState({
-    bio: useElementStartPosition('#bio'),
-    projects: useElementStartPosition('#projects'),
-    techStack: useElementStartPosition('#techStack'),
-    contact: useElementStartPosition('.contact'),
+  const [sectionPositions, setSectionPositions] = useState<sectionPositions>({
+    bio: undefined,
+    projects: undefined,
+    techStack: undefined,
+    contact: undefined,
   });
 
   useEffect(() => {
+    const pageTop = document.querySelector('body')?.getBoundingClientRect().y;
     const bioRect = document.querySelector(`#bio`)?.getBoundingClientRect();
-    const bio = { x: bioRect?.left, y: bioRect?.top };
-
     const projRect = document
       .querySelector(`#projects`)
       ?.getBoundingClientRect();
-    const projects = { x: projRect?.left, y: projRect?.top };
-
     const techStackRect = document
       .querySelector(`#tech-stack`)
       ?.getBoundingClientRect();
-    const techStack = { x: techStackRect?.left, y: techStackRect?.top };
-
     const contactRect = document
       .querySelector(`.contact`)
       ?.getBoundingClientRect();
-    const contact = { x: contactRect?.left, y: contactRect?.top };
 
-    setSectionPositions({
-      bio,
-      projects,
-      techStack,
-      contact,
-    });
+    // console.log(pageTop, bioRect, projRect, techStackRect, contactRect)
+
+    if (
+      (pageTop === 0 || pageTop) &&
+      bioRect &&
+      projRect &&
+      techStackRect &&
+      contactRect
+    ) {
+      const bio = {
+        x: bioRect.x,
+        y: bioRect.y - pageTop,
+      };
+
+      const projects = {
+        x: projRect.x,
+        y: projRect.y - pageTop,
+      };
+
+      const techStack = {
+        x: techStackRect.x,
+        y: techStackRect.y - pageTop,
+      };
+
+      const contact = {
+        x: contactRect.x,
+        y: contactRect.y - pageTop,
+      };
+
+      setSectionPositions({
+        bio,
+        projects,
+        techStack,
+        contact,
+      });
+    }
   }, []);
 
-  useScrollPosition(({ currPos }) => {
+  const chooseHighlightItem = (currPos: number) => {
     const { bio, projects, techStack, contact } = sectionPositions;
 
-    const landingDiff = Math.abs(currPos.y);
-    const bioDiff = Math.abs(bio.y ? bio.y + currPos.y : 0);
-    const projDiff = Math.abs(projects.y ? projects.y + currPos.y : 0);
-    const techDiff = Math.abs(techStack.y ? techStack.y + currPos.y : 0);
-    const contactDiff = Math.abs(contact.y ? contact.y + currPos.y : 0);
+    if (bio && projects && techStack && contact) {
+      const landingDiff = Math.abs(currPos);
+      const bioDiff = Math.abs(bio.y ? bio.y + currPos : 0);
+      const projDiff = Math.abs(projects.y ? projects.y + currPos : 0);
+      const techDiff = Math.abs(techStack.y ? techStack.y + currPos : 0);
+      const contactDiff = Math.abs(contact.y ? contact.y + currPos : 0);
 
-    const min = Math.min(landingDiff, bioDiff, projDiff, techDiff, contactDiff);
+      const min = Math.min(
+        landingDiff,
+        bioDiff,
+        projDiff,
+        techDiff,
+        contactDiff
+      );
 
-    if (bioDiff === min) setHighlight('bio');
-    else if (projDiff === min) setHighlight('projects');
-    else if (techDiff === min) setHighlight('tech');
-    else if (contactDiff === min) setHighlight('contact');
-    else setHighlight('');
+      return bioDiff === min
+        ? 'bio'
+        : projDiff === min
+        ? 'projects'
+        : techDiff === min
+        ? 'tech'
+        : contactDiff === min
+        ? 'contact'
+        : '';
+    }
+    return '';
+  };
+
+  useScrollPosition(({ currPos }) => {
+    const item = chooseHighlightItem(currPos.y);
+    setHighlight(item);
   });
 
   return (
