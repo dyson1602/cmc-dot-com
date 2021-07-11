@@ -4,78 +4,13 @@ import { NavBarButton } from './NavBarButton';
 import { useScrollPosition } from '../hooks/useScrollPosition';
 import { useElementStartPosition } from '../hooks/useElementStartPosition';
 import { useState } from 'react';
-import { useEffect } from 'react';
-
-interface sectionPositions {
-  bio: { x: number; y: number } | undefined;
-  projects: { x: number; y: number } | undefined;
-  techStack: { x: number; y: number } | undefined;
-  contact: { x: number; y: number } | undefined;
-}
 
 export const NavBar: React.FC = () => {
   const [highlight, setHighlight] = useState<string | null>(null);
-  const [sectionPositions, setSectionPositions] = useState<sectionPositions>({
-    bio: undefined,
-    projects: undefined,
-    techStack: undefined,
-    contact: undefined,
-  });
 
-  useEffect(() => {
-    const pageTop = document.querySelector('body')?.getBoundingClientRect().y;
-    const bioRect = document.querySelector(`#bio`)?.getBoundingClientRect();
-    const projRect = document
-      .querySelector(`#projects`)
-      ?.getBoundingClientRect();
-    const techStackRect = document
-      .querySelector(`#tech-stack`)
-      ?.getBoundingClientRect();
-    const contactRect = document
-      .querySelector(`.contact`)
-      ?.getBoundingClientRect();
-
-    // console.log(pageTop, bioRect, projRect, techStackRect, contactRect)
-
-    if (
-      (pageTop === 0 || pageTop) &&
-      bioRect &&
-      projRect &&
-      techStackRect &&
-      contactRect
-    ) {
-      const bio = {
-        x: bioRect.x,
-        y: bioRect.y - pageTop,
-      };
-
-      const projects = {
-        x: projRect.x,
-        y: projRect.y - pageTop,
-      };
-
-      const techStack = {
-        x: techStackRect.x,
-        y: techStackRect.y - pageTop,
-      };
-
-      const contact = {
-        x: contactRect.x,
-        y: contactRect.y - pageTop,
-      };
-
-      setSectionPositions({
-        bio,
-        projects,
-        techStack,
-        contact,
-      });
-    }
-  }, []);
+  const { bio, projects, techStack, contact } = useElementStartPosition();
 
   const chooseHighlightItem = (currPos: number) => {
-    const { bio, projects, techStack, contact } = sectionPositions;
-
     if (bio && projects && techStack && contact) {
       const landingDiff = Math.abs(currPos);
       const bioDiff = Math.abs(bio.y ? bio.y + currPos : 0);
