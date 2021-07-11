@@ -13,4 +13,8 @@
   color: #49393bff;
   background-color: white;
 }
+
+.nav-bar-button.highlight {
+  color: #d64045ff;
+}
 /*# sourceMappingURL=nav-bar-button.css.map */
