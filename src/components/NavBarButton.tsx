@@ -3,9 +3,14 @@ import '../styles/nav-bar-button.css';
 interface NavBarButtonProps {
   dest: string;
   title: string;
+  highlight: boolean;
 }
 
-export const NavBarButton: React.FC<NavBarButtonProps> = ({ dest, title }) => {
+export const NavBarButton: React.FC<NavBarButtonProps> = ({
+  dest,
+  title,
+  highlight,
+}) => {
   const clickAction = (dest: string) => {
     const target = document.querySelector(dest);
     if (target) {
@@ -14,7 +19,10 @@ export const NavBarButton: React.FC<NavBarButtonProps> = ({ dest, title }) => {
   };
 
   return (
-    <div className="nav-bar-button" onClick={() => clickAction(dest)}>
+    <div
+      className={highlight ? 'nav-bar-button highlight' : 'nav-bar-button'}
+      onClick={() => clickAction(dest)}
+    >
       {title}
     </div>
   );

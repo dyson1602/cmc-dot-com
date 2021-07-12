@@ -1,7 +1,6 @@
 import '../styles/landing-container.css';
 import ANewProductionAnimation from '../animations/ANewProduction';
 import ScrollToProfileButton from './ScollToProfileButton';
-import ThursdayAnimation from '../animations/Thursday';
 
 export const LandingContainer: React.FC = () => {
   return (
